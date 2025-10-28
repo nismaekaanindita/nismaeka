@@ -1,7 +1,21 @@
-// 1. Pilih tombol berdasarkan ID-nya
-const tombolSapa=document.getElementById('sapaButton');
-// 2. Tambahkan 'event listener' untuk aksi 'click'
-tombolsapa.addEventListener('click', function() {
-    // 3. Jalankan kode ini ketika tombol di-klik
-    alert('Hallo! Terima kasig sudah berkunjung!');
-});
+function kirimPesan() {
+  const nama = document.getElementById("nama").value.trim();
+  const kelas = document.getElementById("kelas").value.trim();
+  const pesan = document.getElementById("pesan").value.trim();
+  const status = document.getElementById("status");
+
+  if (nama === "" || kelas === "" || pesan === "") {
+    status.style.color = "red";
+    status.innerText = "⚠️ Harap isi semua kolom sebelum mengirim.";
+    return;
+  }
+
+  // Simulasi pengiriman pesan (belum ada database)
+  status.style.color = "green";
+  status.innerText = ✅ Terima kasih ${nama}! Pesan kamu sudah dikirim ke guru BK.;
+
+  // Kosongkan form setelah terkirim
+  document.getElementById("nama").value = "";
+  document.getElementById("kelas").value = "";
+  document.getElementById("pesan").value = "";
+}
