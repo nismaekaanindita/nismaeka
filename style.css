@@ -1,24 +1,72 @@
 body {
-    background-color:#FFFFE0; /*warna kuning cerah */
-    font-family:Arial, sans-serif; /*jenis huruf yang bersih dan mudah dibaca */
-    color: #191970; /* Warna teks utama (biru gelap) */
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f9fb;
+  color: #333;
 }
 
-.kartu profil { 
-    width:300px;
-    margin:50px auto; /* 50px jarak atas /bawah,auto menengahkan kiri/kanan */
-    padding: 20px;
-    background-color:white;
-    border-radius: 15px; /* Membuat sudut menjadi melengkung */
-    box-shadow: 0 4px 8px rgba(0,0,0,0,1); /* Efek bayangan */
+header {
+  background-color: #3c91e6;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
-|
 
-.kartu-profil img {
-    width:150px;
-    border-radius: 50%; /* Trik untuk membuat gambar persegi menjadi lingkaran sempurna */
+header h1 {
+  margin: 0;
+  font-size: 28px;
 }
-.kartu-profil {
-    /*... (kode dari slide sebelumnya) ...*/
-    text-alighn: center; /* Menengahkan semua teks di dalam kartu */
+
+main {
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.intro, .form-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #3c91e6;
+  margin-top: 0;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+button {
+  background-color: #3c91e6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #2f7ed8;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #f0f0f0;
+  color: #555;
+  margin-top: 30px;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
 }
