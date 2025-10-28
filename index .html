@@ -3,81 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asisten Siswa Pintar</title>
-  <style>
-    body {
-      font-family: "Poppins", sans-serif;
-      background: #f0f4f8;
-      color: #333;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      color: #2b5dff;
-    }
-    .card {
-      background: white;
-      padding: 15px;
-      margin: 10px auto;
-      border-radius: 15px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 90%;
-      max-width: 400px;
-    }
-    input, textarea {
-      width: 90%;
-      padding: 10px;
-      margin: 5px 0;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background: #2b5dff;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-    ul {
-      text-align: left;
-    }
-  </style>
+  <title>Konseling Online Sekolah</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🧠 Asisten Siswa Pintar</h1>
-  <p>Catat dan ingatkan jadwalmu di sini!</p>
+  <header>
+    <h1>🌿 Konseling Online Sekolah</h1>
+    <p>Tempat bercerita dan berkonsultasi dengan guru BK secara nyaman dan rahasia.</p>
+  </header>
 
-  <div class="card">
-    <h3>Tambah Kegiatan</h3>
-    <input id="judul" type="text" placeholder="Judul (misal: Tugas Matematika)">
-    <textarea id="deskripsi" placeholder="Deskripsi atau catatan"></textarea>
-    <input id="tanggal" type="date">
-    <button onclick="tambahTugas()">Simpan</button>
-  </div>
+  <main>
+    <section class="intro">
+      <h2>Selamat Datang!</h2>
+      <p>
+        Website ini dibuat untuk membantu siswa yang ingin berkonsultasi dengan guru BK tanpa perlu datang langsung ke ruang konseling.
+        Cukup isi formulir di bawah ini, dan guru BK akan menerima pesan kamu dengan aman.
+      </p>
+    </section>
 
-  <div class="card">
-    <h3>Daftar Kegiatan</h3>
-    <ul id="daftar"></ul>
-  </div>
+    <section class="form-section">
+      <h2>Formulir Konseling</h2>
+      <input type="text" id="nama" placeholder="Nama lengkap">
+      <input type="text" id="kelas" placeholder="Kelas">
+      <textarea id="pesan" placeholder="Tuliskan keluhan atau hal yang ingin kamu bicarakan..."></textarea>
+      <button onclick="kirimPesan()">Kirim</button>
+      <p id="status"></p>
+    </section>
+  </main>
 
-  <script>
-    const daftar = document.getElementById('daftar');
-    function tambahTugas() {
-      const judul = document.getElementById('judul').value;
-      const deskripsi = document.getElementById('deskripsi').value;
-      const tanggal = document.getElementById('tanggal').value;
-      if (!judul || !tanggal) {
-        alert('Isi judul dan tanggal ya!');
-        return;
-      }
-      const li = document.createElement('li');
-      li.innerHTML = `<strong>${judul}</strong> - ${tanggal}<br>${deskripsi}`;
-      daftar.appendChild(li);
-      document.getElementById('judul').value = '';
-      document.getElementById('deskripsi').value = '';
-      document.getElementById('tanggal').value = '';
-    }
-  </script>
+  <footer>
+    <p>© 2025 Konseling Online Sekolah | Dibuat oleh Nisma Eka</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
